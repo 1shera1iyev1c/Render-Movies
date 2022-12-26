@@ -12,11 +12,11 @@ let elArray = document.querySelector('.alert')
 let elArrayContent = document.querySelector('.strong')
 
 // Render Movies
-let slicedFilms = movies.slice(10, 20)
+let slicedFilms = movies.slice(10, 1000)
 
 let renderFilm = slicedFilms.map(someThing =>{
     return{
-        title: someThing.Title,
+        title: someThing.Title.toString(),
         imageLink : `https://i.ytimg.com/vi/${someThing.ytid}/mqdefault.jpg`,
         categories : someThing.Categories,
         year : someThing.movie_year,
