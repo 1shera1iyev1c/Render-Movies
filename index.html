@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Render Movies</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body style="background: linear-gradient(rgb(255, 115, 0) , purple 50%, rgb(68, 68, 237) );">    
+    <div class="container">
+      <h2 class="text-center mt-3 name2">Movies catalog</h2>
+      <div class="row ">
+          <div class="col-4 pt-4">
+           <form class="form">
+            <div class="mb-3 mt-3">
+              <input type="text" class="year form-control" id="email" placeholder="Search" name="email">
+            </div>
+            <div class="mb-3">
+                <input type="number" min="6" step="0.1" class="form-control rating" id="pwd" placeholder="Search Ratings" name="pswd">
+            </div>
+            <select class="form-select select">
+                <option value="All">All</option>
+            </select>
+            <select class="form-select mt-4 high-low">
+                <option value="high">Rating (high to low)</option>
+                <option value="low">Rating (low to high)</option>
+            </select>
+            <button class="btn btn-primary mt-4 container-fluid">Submit</button>
+           </form>
+                <h2 class="text-center h1 w-100 mt-5 titile pt-5">Bookmarked movies</h2>
+                <ul class="list-group pt-5">
+                  <li class="list-group-item h-25 mb-5 d-flex align-items-center justify-content-between pt-4 pb-4">
+                      <p class="text-start h6">Avangers: Infinty War</p>
+                      <button type="button" class="btn btn-danger mb-2">Remove</button>
+                  </li>
+                  <li class="list-group-item h-25 mb-5 border-top d-flex align-items-center justify-content-between pt-4 pb-4">
+                      <p class="text-start h6">The Avangers</p>
+                      <button type="button" class="btn btn-danger mb-2">Remove</button>
+                  </li>
+                  <li class="list-group-item h-25 mb-5 border-top d-flex align-items-center justify-content-between pt-4 pb-4">
+                      <p class="text-start h6">12 years a Slave</p>
+                      <button type="button" class="btn btn-danger mb-2">Remove</button>
+                  </li>
+                  
+                </ul>
+          </div>
+    
+      <div class="col-8 pe-5">
+          <div class="search">
+            <h4 class="text-start texxt">Search results: <span class="num">0</span></h4>
+            <div class="alert alert-success">
+             <strong class="strong">Use the form on the left to search for a movie  </strong>
+           </div>
+          </div>
+            <ul class=" justify-content-around cotet d-flex flex-wrap list-unstyled">
+             
+            </ul>
+            <ul class="pagination justify-content-center mt-5">
+              
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+            </ul>
+            
+          </div>
+      </div>
+  </div>   
+  
+
+  <template id="template">
+    <li style="background-color: #fff; width: 350px; border: 2px solid blue; border-radius: 10px ;margin-bottom: 20px; padding: 10px;">
+      <img class="image" style="width: 300px; display: block; margin: 0 auto; border-radius: 10px;  margin-top: 20px" src="https://i.ytimg.com/vi/3vqcMr1q5Uc/mqdefault.jpg">
+      <h3 class="title" style="margin-left: 20px; margin-top: 20px; color: red; font-size: 30px; font-weight: 700;"></h3>
+      <p  style="margin-left: 20px; font-size: 20px; font-weight: 500;">  <span class="text"></span> </p>
+      <p style="margin-left: 20px; font-size: 20px; font-weight: 500;"> <span class="text2"></span></p>
+      <p class="text3" style="margin-left: 20px; font-size: 20px; font-weight: 500; display: block;"></p>
+      <a target="_blank" class="btn btn-primary" id="btn" style="margin-left: 20px; margin-bottom: 20px" href="https://www.youtube.com/watch?v=3vqcMr1q5Uc">Watch tralier</a>
+    </li>
+  </template>
+    
+    <script src="js/movies.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
